@@ -7,13 +7,13 @@ module full_adder_tb;
 
 
 reg a;
-reg b
+reg b;
 reg cin;
 
 wire sum;
 wire carry;
 
-full_adder uut(a,b,cin,sum,carry);
+full_adder uut (a,b,cin,sum,carry);
 
 initial begin
 	$dumpfile("full_adder.vcd");
@@ -38,4 +38,3 @@ initial begin
 end
                
 endmodule
-
