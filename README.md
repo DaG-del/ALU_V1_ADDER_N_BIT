@@ -10,4 +10,4 @@ n_bit_adder.v will bring all these together
 
 test_bench will be used to test the code with a clock pulse and many N-bit inputs
 
-![IMG_20240906_113934](https://github.com/user-attachments/assets/caa284cc-64db-444d-ba03-c2b5d15dfd04)
+![1_bit_adder](https://github.com/user-attachments/assets/e1faa6e6-5c3c-48d8-936d-505e23fcdd00)
