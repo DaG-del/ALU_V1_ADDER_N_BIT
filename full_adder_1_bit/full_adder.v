@@ -1,8 +1,12 @@
 //Full adder using structural modeling
-module full_adder (
-    input a,b,cin,
-    output sum,carry
-);
+module full_adder (a,b,cin,sum,carry);
+
+input a;
+input b;
+input cin;
+
+output sum;
+output carry;
 
 wire w1,w2,w3,w4;       //Internal connections
 
