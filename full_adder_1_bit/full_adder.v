@@ -1,4 +1,3 @@
-//Full adder using structural modeling
 module full_adder (a,b,cin,sum,carry);
 
 	input a;
