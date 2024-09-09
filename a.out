@@ -1,0 +1,50 @@
+#! /usr/local/Cellar/icarus-verilog/12.0/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "/usr/local/Cellar/icarus-verilog/12.0/lib/ivl/system.vpi";
+:vpi_module "/usr/local/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/local/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/local/Cellar/icarus-verilog/12.0/lib/ivl/v2005_math.vpi";
+:vpi_module "/usr/local/Cellar/icarus-verilog/12.0/lib/ivl/va_math.vpi";
+S_0x7f937b804410 .scope module, "incrementer" "incrementer" 2 1;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "I0";
+    .port_info 1 /INPUT 1 "I1";
+    .port_info 2 /INPUT 1 "I2";
+    .port_info 3 /OUTPUT 1 "O0";
+    .port_info 4 /OUTPUT 1 "O1";
+    .port_info 5 /OUTPUT 1 "O2";
+o0x7f937a632068 .functor BUFZ 1, C4<z>; HiZ drive
+L_0x7f937a416e60 .functor AND 1, o0x7f937a632068, L_0x7f937a416f10, C4<1>, C4<1>;
+o0x7f937a632038 .functor BUFZ 1, C4<z>; HiZ drive
+L_0x7f937a416f10 .functor NOT 1, o0x7f937a632038, C4<0>, C4<0>, C4<0>;
+L_0x7f937a416fc0 .functor AND 1, o0x7f937a632068, L_0x7f937a4170d0, C4<1>, C4<1>;
+o0x7f937a632008 .functor BUFZ 1, C4<z>; HiZ drive
+L_0x7f937a4170d0 .functor NOT 1, o0x7f937a632008, C4<0>, C4<0>, C4<0>;
+L_0x7f937a417180 .functor AND 1, L_0x7f937a417300, o0x7f937a632038, o0x7f937a632008, C4<1>;
+L_0x7f937a417300 .functor NOT 1, o0x7f937a632068, C4<0>, C4<0>, C4<0>;
+L_0x7f937a417370 .functor OR 1, L_0x7f937a416e60, L_0x7f937a416fc0, L_0x7f937a417180, C4<0>;
+L_0x7f937a4174e0 .functor XOR 1, o0x7f937a632008, o0x7f937a632038, C4<0>, C4<0>;
+L_0x7f937a663008 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+L_0x7f937a417550 .functor OR 1, L_0x7f937a417650, L_0x7f937a663008, C4<0>, C4<0>;
+L_0x7f937a417650 .functor NOT 1, o0x7f937a632008, C4<0>, C4<0>, C4<0>;
+v0x7f937b804640_0 .net "I0", 0 0, o0x7f937a632008;  0 drivers
+v0x7f937a407620_0 .net "I1", 0 0, o0x7f937a632038;  0 drivers
+v0x7f937a416550_0 .net "I2", 0 0, o0x7f937a632068;  0 drivers
+v0x7f937a416600_0 .net "O0", 0 0, L_0x7f937a417550;  1 drivers
+v0x7f937a4166a0_0 .net "O1", 0 0, L_0x7f937a4174e0;  1 drivers
+v0x7f937a416780_0 .net "O2", 0 0, L_0x7f937a417370;  1 drivers
+v0x7f937a416820_0 .net "W1", 0 0, L_0x7f937a416e60;  1 drivers
+v0x7f937a4168c0_0 .net "W2", 0 0, L_0x7f937a416fc0;  1 drivers
+v0x7f937a416960_0 .net "W3", 0 0, L_0x7f937a417180;  1 drivers
+v0x7f937a416a70_0 .net *"_ivl_1", 0 0, L_0x7f937a416f10;  1 drivers
+v0x7f937a416b10_0 .net *"_ivl_12", 0 0, L_0x7f937a417650;  1 drivers
+v0x7f937a416bc0_0 .net/2s *"_ivl_14", 0 0, L_0x7f937a663008;  1 drivers
+v0x7f937a416c70_0 .net *"_ivl_4", 0 0, L_0x7f937a4170d0;  1 drivers
+v0x7f937a416d20_0 .net *"_ivl_7", 0 0, L_0x7f937a417300;  1 drivers
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "./incrementer/incrementer.v";
